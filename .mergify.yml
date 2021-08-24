@@ -1,0 +1,8 @@
+pull_request_rules:
+- actions:
+    comment:
+      message: '@mergifyio backport 20210824172042/test_command_backport/stable/#3.1
+        20210824172042/test_command_backport/feature/one'
+  conditions:
+  - base=20210824172042/test_command_backport/main
+  name: auto-backport
