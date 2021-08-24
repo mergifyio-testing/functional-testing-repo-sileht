@@ -1,0 +1,7 @@
+pull_request_rules:
+- actions:
+    comment:
+      message: '@mergifyio copy 20210824172230/test_command_copy/stable/#3.1 20210824172230/test_command_copy/feature/one'
+  conditions:
+  - base=20210824172230/test_command_copy/main
+  name: auto-copy
