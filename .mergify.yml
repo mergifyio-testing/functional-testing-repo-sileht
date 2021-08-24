@@ -1,0 +1,9 @@
+pull_request_rules:
+- actions:
+    backport:
+      branches:
+      - 20210824145705/test_backport_cancelled/stable/3.1
+  conditions:
+  - base=20210824145705/test_backport_cancelled/main
+  - label=backport-3.1
+  name: backport
