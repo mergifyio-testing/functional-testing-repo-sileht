@@ -1,0 +1,13 @@
+pull_request_rules:
+- actions:
+    label:
+      add:
+      - unstable
+      - foobar
+      remove:
+      - stable
+      - what
+  conditions:
+  - base=20210909142710/test_label/main
+  - label=stable
+  name: rename label
