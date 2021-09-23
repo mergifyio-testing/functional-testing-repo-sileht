@@ -1,0 +1,14 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+      priority: high
+  conditions:
+  - base=20210923125306/test_jit_schedule/main
+  name: fast queue
+queue_rules:
+- allow_inplace_speculative_checks: false
+  conditions:
+  - 'schedule: MON-FRI 08:00-17:00'
+  name: default
+  speculative_checks: 5
