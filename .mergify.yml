@@ -1,0 +1,13 @@
+defaults:
+  actions:
+    backport:
+      branches:
+      - 20210929111938/test_command_backport_with_defaults/stable/#3.1
+      - 20210929111938/test_command_backport_with_defaults/feature/one
+pull_request_rules:
+- actions:
+    comment:
+      message: '@mergifyio backport'
+  conditions:
+  - base=20210929111938/test_command_backport_with_defaults/main
+  name: auto-backport
