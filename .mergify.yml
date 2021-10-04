@@ -1,0 +1,13 @@
+pull_request_rules:
+- actions:
+    comment:
+      message: rebase it please
+  conditions:
+  - -up-to-date
+  name: not up2date
+- actions:
+    comment:
+      message: good good good
+  conditions:
+  - up-to-date
+  name: up2date
