@@ -1,0 +1,8 @@
+pull_request_rules:
+- actions:
+    merge:
+      strict: smart+fastpath
+  conditions:
+  - base=20211005141426/test_merge_smart_unordered/main
+  - label=ready
+  name: Merge on main
