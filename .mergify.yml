@@ -1,0 +1,8 @@
+pull_request_rules:
+- actions:
+    merge:
+      strict: smart
+  conditions:
+  - base=20211005144038/test_merge_smart_legacy/main
+  - label=ready
+  name: Merge on main
