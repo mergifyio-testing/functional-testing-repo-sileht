@@ -1,0 +1,9 @@
+pull_request_rules:
+- actions:
+    merge:
+      method: squash
+      strict: smart
+  conditions:
+  - base=20211012155657/test_merge_strict_squash/main
+  - label=squash
+  name: Merge on main
