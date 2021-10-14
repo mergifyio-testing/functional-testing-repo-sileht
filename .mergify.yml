@@ -1,0 +1,11 @@
+pull_request_rules:
+- actions:
+    merge:
+      strict: true
+      strict_method: rebase
+      update_bot_account: mergify-test1
+  conditions:
+  - base=20211014183155/test_merge_strict_rebase_with_user/main
+  - status-success=continuous-integration/fake-ci
+  - '#approved-reviews-by>=1'
+  name: smart strict merge on main
