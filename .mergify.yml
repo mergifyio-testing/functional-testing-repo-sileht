@@ -1,0 +1,27 @@
+pull_request_rules:
+- actions:
+    merge:
+      priority: high
+      strict: smart+ordered
+  conditions:
+  - base=20211014183445/test_merge_priority/main
+  - label=high
+  - status-success=continuous-integration/fake-ci
+  name: Merge priority high
+- actions:
+    merge:
+      strict: smart+ordered
+  conditions:
+  - base=20211014183445/test_merge_priority/main
+  - label=medium
+  - status-success=continuous-integration/fake-ci
+  name: Merge priority default
+- actions:
+    merge:
+      priority: 1
+      strict: smart+ordered
+  conditions:
+  - base=20211014183445/test_merge_priority/main
+  - label=low
+  - status-success=continuous-integration/fake-ci
+  name: Merge priority low
