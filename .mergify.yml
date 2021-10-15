@@ -1,0 +1,9 @@
+pull_request_rules:
+- actions:
+    merge:
+      strict: smart
+  conditions:
+  - base=20211015082846/test_merge_smart_strict/main
+  - status-success=continuous-integration/fake-ci
+  - '#approved-reviews-by>=1'
+  name: strict merge on main
