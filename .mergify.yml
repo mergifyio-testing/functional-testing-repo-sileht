@@ -1,0 +1,12 @@
+pull_request_rules:
+- actions:
+    queue:
+      branch_protection_required_for_queueing: false
+      name: default
+  conditions:
+  - base=20211025115120/test_queue_without_branch_protection_for_queueing/main
+  - label=queue
+  name: Merge priority high
+queue_rules:
+- conditions: []
+  name: default
