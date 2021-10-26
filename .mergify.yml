@@ -1,0 +1,13 @@
+pull_request_rules:
+- actions:
+    comment:
+      message: 'rebase it please: {{commits_behind|length}} commits behind'
+  conditions:
+  - '#commits-behind>0'
+  name: not up2date
+- actions:
+    comment:
+      message: good good good
+  conditions:
+  - '#commits-behind: 0'
+  name: up2date
