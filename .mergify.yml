@@ -5,4 +5,5 @@ pull_request_rules:
   conditions:
   - base=20211110082403/test_merge_rule_deleted/main
   - status-success=continuous-integration/fake-ci
-  name: Merge me
+  - label=automerge
+  name: Merge only if label is present
