@@ -1,0 +1,6 @@
+pull_request_rules:
+- actions:
+    merge: {}
+  conditions:
+  - base!=20211110075756/test_change_mergify_yml_in_meantime/main
+  name: nothing
