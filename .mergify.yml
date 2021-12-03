@@ -1,0 +1,10 @@
+pull_request_rules:
+- actions:
+    merge:
+      priority: high
+      strict: smart+ordered
+  conditions:
+  - base=20211203100128/test_strict_mode_brownout/main
+  - label=high
+  - status-success=continuous-integration/fake-ci
+  name: Merge priority high
