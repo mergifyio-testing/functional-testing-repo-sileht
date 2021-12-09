@@ -1,0 +1,12 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - base=20211209142846/test_queue_ci_timeout/main
+  name: Merge priority high
+queue_rules:
+- ci_timeout: 1s
+  conditions:
+  - continuous-integration/fake-ci
+  name: default
