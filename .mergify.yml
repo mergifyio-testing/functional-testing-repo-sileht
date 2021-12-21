@@ -1,0 +1,9 @@
+pull_request_rules:
+- actions:
+    review:
+      bot_account: mergify-test4
+      message: WTF?
+      type: REQUEST_CHANGES
+  conditions:
+  - base=20211221143030/test_review_with_oauth_token/main
+  name: requested
