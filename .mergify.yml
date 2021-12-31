@@ -1,0 +1,7 @@
+pull_request_rules:
+- actions:
+    merge: {}
+  conditions:
+  - base=20211231142900/test_merge_branch_protection_strict/main
+  - status-success=continuous-integration/fake-ci
+  name: merge
