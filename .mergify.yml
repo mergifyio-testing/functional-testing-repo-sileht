@@ -1,0 +1,11 @@
+pull_request_rules:
+- actions:
+    label:
+      add:
+      - foobar
+    subscription:
+      subscribed:
+      - mergify-test1
+  conditions:
+  - base=20220105165424/test_subscription/main
+  name: subscription
