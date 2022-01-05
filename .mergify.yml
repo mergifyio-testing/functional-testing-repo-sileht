@@ -1,0 +1,11 @@
+pull_request_rules:
+- actions:
+    assign:
+      users:
+      - mergify-test1
+    subscription:
+      subscribed:
+      - mergify-test1
+  conditions:
+  - base=20220105163613/test_subscription/main
+  name: subscription
