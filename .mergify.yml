@@ -1,0 +1,11 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+      require_branch_protection: false
+  conditions:
+  - base=20220107144216/test_queue_inplace_interrupted/main
+  name: Merge priority high
+queue_rules:
+- conditions: []
+  name: default
