@@ -1,0 +1,9 @@
+pull_request_rules:
+- actions:
+    merge:
+      commit_message: title+body
+      method: merge
+  conditions:
+  - base=20220114113852/test_merge_custom_msg_title_body/main
+  - status-success=continuous-integration/fake-ci
+  name: Merge on main
