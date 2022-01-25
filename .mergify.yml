@@ -1,0 +1,3 @@
+command_restrictions:
+  copy:
+  - base=20220125084743/test_command_restriction/main
