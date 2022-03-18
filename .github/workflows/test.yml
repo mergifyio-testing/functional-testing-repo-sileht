@@ -1,0 +1,14 @@
+
+name: post_check trigger2
+permissions: read-all
+on:
+  check_run:
+    types: [completed]
+
+jobs:
+  trigger:
+    timeout-minutes: 5
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Build 🔧 & Test 🔍
+        run: "echo it works! (20220318090031/test_workflow_trigger/main)"
