@@ -1,0 +1,7 @@
+pull_request_rules:
+- actions:
+    post_check: {}
+  conditions:
+  - base=20220318075341/test_workflow_trigger/main
+  - label=squash
+  name: label missing
