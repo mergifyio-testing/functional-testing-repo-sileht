@@ -1,0 +1,18 @@
+
+name: post_check trigger testing
+permissions: read-all
+on:
+  check_run:
+    types: [completed]
+
+jobs:
+  trigger:
+    timeout-minutes: 5
+    runs-on: ubuntu-20.04
+    steps:
+      - name: 🔧 Test 🔍
+        run: |
+         echo '${{ toJSON(github.event.check_run.app.name) }}'
+         echo '${{ toJSON(github.event.check_run.name) }}'
+         echo '${{ toJSON(github.event.check_run.status) }}'
+         echo '${{ toJSON(github.event.check_run.conclusion) }}'
