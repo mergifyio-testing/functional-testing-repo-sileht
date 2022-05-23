@@ -1,0 +1,7 @@
+pull_request_rules:
+- actions:
+    close: {}
+  conditions:
+  - base=20220523223053/test_linear_history/main
+  - -linear-history
+  name: noways
