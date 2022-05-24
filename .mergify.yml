@@ -1,0 +1,12 @@
+pull_request_rules:
+- actions:
+    comment:
+      message: and or pr
+  conditions:
+  - or:
+    - and:
+      - base=20220524130904/test_and_or/main
+      - closed
+      - label=foo
+    - merged
+  name: no-draft
