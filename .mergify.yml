@@ -1,1 +1,9 @@
+queue_rules:
+  - name: urgent
+    conditions: []
+  - name: default
+    conditions: []
+  - name: low
+    conditions: []
+  
 pull_request_rules:
