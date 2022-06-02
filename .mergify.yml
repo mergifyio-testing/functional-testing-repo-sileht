@@ -6,4 +6,4 @@ queue_rules:
   - name: low
     conditions: []
   
-pull_request_rules:
+pull_request_rules: []
