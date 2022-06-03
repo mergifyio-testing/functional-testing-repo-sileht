@@ -5,5 +5,7 @@ queue_rules:
     conditions: []
   - name: low
     conditions: []
+  - name: extra-low
+    conditions: []
   
 pull_request_rules: []
