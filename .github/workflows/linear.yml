@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Linear author as reviewer
 
 on:
   pull_request:
@@ -12,13 +12,13 @@ permissions:
   pull-requests: write
 
 jobs:
-  build:
+  add-linear-author-as-reviewer:
     runs-on: ubuntu-latest
     steps:
 
       # Runs a set of commands using the runners shell
       - name: Add reviewers
-        uses: Mergifyio/linear-author-to-gh-reviewers@latest
+        uses: Mergifyio/add-linear-author-as-reviewer@main
         with:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
            LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
