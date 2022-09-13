@@ -1,0 +1,13 @@
+pull_request_rules:
+- actions:
+    comment:
+      message: <h1>WTF?<h1>
+  conditions:
+  - base=20220913125051/test_debugger/main
+  - or:
+    - label=doubt
+    - label=suspect
+  - and:
+    - number>0
+    - title~=pull request
+  name: <h1>comment</h1>
