@@ -7,7 +7,7 @@ pull_request_rules:
       comment:
         message: "Hello!"
  
-  - name: "mergeit"
+  - name: "merge<h1>it</h1>"
     conditions:
     - base=main
     actions:
@@ -15,5 +15,5 @@ pull_request_rules:
         users: ["mergify-test1"]
       label: 
         add: ["need-review"]
-        remove: ["auto-merge"]
+        remove: ["auto-<b>merge</b>"]
       merge:
