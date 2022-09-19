@@ -4,7 +4,7 @@ name: Linear automation
 
 on:
   pull_request:
-    # branches: [ "main" ]
+    branches: [ "main" ]
     types: [ "opened", "synchronize", "reopened", "edited" ]
 
 
@@ -21,7 +21,6 @@ jobs:
         with:
            GITHUB_TOKEN: ${{ secrets.PAT_TEST }}
            LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
-           PULL_REQUEST_BODY: ${{ github.event.pull_request.body }}
            EMAIL_MAPPING: |
              sileht@mergify.com sileht
              jd@mergify.com jd
