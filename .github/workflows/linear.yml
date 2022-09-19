@@ -3,12 +3,16 @@
 name: Linear automation
 
 on:
-  pull_request_target:
+  pull_request:
     branches: [ "main" ]
     types: [ "opened", "synchronize", "reopened", "edited" ]
 
 
-permissions: write-all
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+
 
 jobs:
   add-linear-author-as-reviewer:
