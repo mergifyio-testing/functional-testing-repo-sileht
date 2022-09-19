@@ -8,11 +8,7 @@ on:
     types: [ "opened", "synchronize", "reopened", "edited" ]
 
 
-permissions:
-  pull-requests: write
-  issues: write
-  repository-projects: write
-
+permissions: write-all
 
 jobs:
   add-linear-author-as-reviewer:
