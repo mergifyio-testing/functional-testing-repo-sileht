@@ -1,0 +1,7 @@
+pull_request_rules:
+- actions:
+    review:
+      type: APPROVE
+  conditions:
+  - base=20220926052838/test_review_on_closed_pr/main
+  name: approve
