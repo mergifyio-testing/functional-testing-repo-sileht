@@ -4,4 +4,4 @@ pull_request_rules:
       message: hello
   conditions:
   - base=main
-  name: foobar
+  name: renamed rule
