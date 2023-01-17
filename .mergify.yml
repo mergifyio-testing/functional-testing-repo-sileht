@@ -1,0 +1,16 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+      priority: high
+      update_bot_account: '{{ author }}'
+      update_method: rebase
+  conditions:
+  - base=20230117175130/test_queue_with_rebase_on_githubapp_pr/main
+  - label=queue
+  name: Merge priority high
+queue_rules:
+- allow_inplace_checks: false
+  conditions:
+  - status-success=continuous-integration/fake-ci
+  name: default
