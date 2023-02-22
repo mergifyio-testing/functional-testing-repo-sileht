@@ -1,0 +1,21 @@
+pull_request_rules:
+- actions:
+    comment:
+      message: this one please
+  conditions:
+  - base=20230222120138/test_head_template_attribute/main
+  name: match
+- actions:
+    comment:
+      message: no way
+  conditions:
+  - base=20230222120138/test_head_template_attribute/main
+  - -head~=/{{ author }}$
+  name: don't match
+- actions:
+    comment:
+      message: and this one
+  conditions:
+  - base=20230222120138/test_head_template_attribute/main
+  - head~=/{{ author }}$
+  name: match too
