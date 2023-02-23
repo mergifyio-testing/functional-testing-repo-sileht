@@ -1,0 +1,9 @@
+pull_request_rules:
+- actions:
+    merge:
+      rebase_fallback: merge
+  conditions:
+  - base=20230223154357/test_rebase_fallback_deprecation_notice/main
+  - label=high
+  - status-success=continuous-integration/fake-ci
+  name: Merge priority high
