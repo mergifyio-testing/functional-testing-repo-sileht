@@ -1,0 +1,7 @@
+pull_request_rules:
+- actions:
+    rebase:
+      bot_account: mergify-test2
+  conditions:
+  - base=20230307110358/test_rebase_ok/main
+  name: rebase
