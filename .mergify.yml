@@ -1,0 +1,9 @@
+pull_request_rules:
+- actions:
+    rebase:
+      autosquash: true
+      bot_account: mergify-test2
+  conditions:
+  - base=20230307105700/test_rebase_autosquash_fixup_amend/main
+  - label=rebase
+  name: rebase
