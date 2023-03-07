@@ -1,0 +1,14 @@
+pull_request_rules:
+- actions:
+    rebase:
+      bot_account: mergify-test2
+  conditions:
+  - base=20230307110450/test_rebase_on_closed_pr_deleted_branch/main
+  name: rebase
+- actions:
+    delete_head_branch: {}
+    merge: {}
+  conditions:
+  - base=20230307110450/test_rebase_on_closed_pr_deleted_branch/main
+  - label=merge
+  name: merge
