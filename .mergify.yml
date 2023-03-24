@@ -8,14 +8,3 @@ pull_request_rules:
     actions:
       comment:
         message: "Hello!"
- 
-  - name: "merge<h1>it</h1>"
-    conditions:
-    - base=main
-    actions:
-      assign:
-        users: ["mergify-test1"]
-      label: 
-        add: ["need-review"]
-        remove: ["auto-<b>merge</b>"]
-      merge:
