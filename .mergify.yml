@@ -1,3 +1,5 @@
+extends: functional-testing-repo-sileht2
+
 pull_request_rules: 
   - name: "hello"
     conditions: 
