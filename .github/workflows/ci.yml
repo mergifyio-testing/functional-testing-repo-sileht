@@ -1,0 +1,15 @@
+jobs:
+  unit-tests:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: "Succes step \U0001F389"
+      run: echo toto
+    - name: "Failure step \u274C"
+      run: echo I will fail on sha ${{ github.event.pull_request.head.sha }};exit
+        1
+    timeout-minutes: 5
+name: Continuous Integration
+'on':
+  pull_request:
+    branches: 20230830133700/test_log_embedding/main
