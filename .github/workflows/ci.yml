@@ -1,0 +1,22 @@
+jobs:
+  unit-tests:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: "Succes step \U0001F389"
+      run: echo toto
+    - continue-on-error: true
+      name: "Failed step but no failure \U0001F6D1"
+      run: echo I faill but we continue;exit 1
+    - name: 'Run # nosemgrep generic.ci.security.use-frozen-lockfile.use-frozen-lockfile-pip'
+      run: echo I will fail on sha ${{ github.event.pull_request.head.sha }} run_attempt:${{
+        github.run_attempt }};exit 1
+    - name: "Failure step with *\"/\\<>:|?, a long utf8 char \U0001242B and too many\
+        \ chars to fit in a zip filename in the title \u274C"
+      run: echo I will fail on sha ${{ github.event.pull_request.head.sha }} run_attempt:${{
+        github.run_attempt }};exit 1
+    timeout-minutes: 5
+name: Continuous Integration
+'on':
+  pull_request:
+    branches: 20230905072239/test_log_embedding/main
