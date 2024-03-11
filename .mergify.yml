@@ -1,0 +1,9 @@
+pull_request_rules:
+- actions:
+    backport:
+      branches:
+      - 20240311120039/TBAtest_backport_close/stable/#3.1
+  conditions:
+  - base=20240311120039/TBAtest_backport_close/main
+  - label=backport-#3.1
+  name: Backport to stable/#3.1
