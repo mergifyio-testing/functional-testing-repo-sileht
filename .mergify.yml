@@ -1,0 +1,5 @@
+merge_protections:
+- if: []
+  name: ready or not ready
+  success_conditions:
+  - label = ready
