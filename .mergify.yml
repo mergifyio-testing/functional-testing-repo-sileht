@@ -32,6 +32,7 @@ defaults:
     checks_timeout: 40 minutes
     merge_method: squash
     update_method: rebase
+    update_bot_account: mergify-test1
 
 merge_queue:
   max_parallel_checks: 1
