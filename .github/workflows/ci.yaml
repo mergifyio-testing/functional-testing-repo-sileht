@@ -1,0 +1,16 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tests
+        run: |
+          echo "So many work to do"
+          sleep 60
+          echo "Test passed"
+
+
