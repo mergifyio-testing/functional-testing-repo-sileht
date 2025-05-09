@@ -1,0 +1,8 @@
+pull_request_rules:
+- actions:
+    post_check:
+      success_conditions:
+      - body=20250509215154/test_refresh_via_check_suite_rerequest/main
+  conditions:
+  - base=20250509215154/test_refresh_via_check_suite_rerequest/main
+  name: body-changed
