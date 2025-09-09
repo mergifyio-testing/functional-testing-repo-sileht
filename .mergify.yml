@@ -1,4 +1,4 @@
-priority_rules:
+pull_request_rules:
   - name: toggle
     conditions:
       - label = human
