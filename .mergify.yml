@@ -1,36 +1,8 @@
-queue_rules:
-  - name: standard
-    queue_conditions:
-      - base=main
-
 priority_rules:
-  - name: high priority
+  - name: toggle
     conditions:
-      - label = urgent
-    priority: high
-  - name: low priority
-    conditions:
-      - or:
-          - label = low
-          - label = refactor
-          - label = chore
-          - label = docs
-    priority: low
-
-partition_rules:
-  - name: fallback
-    fallback_partition: true
-  - name: mergify
-    conditions:
-      - label = mergify
-
-defaults:
-  queue_rule:
-    batch_max_wait_time: 30 seconds
-    batch_size: 1
-    branch_protection_injection_mode: queue
-    checks_timeout: 40 minutes
-    merge_method: squash
-
-merge_queue:
-  max_parallel_checks: 1
+      - label = human
+    actions:
+      label:
+        toggle:
+          - bot
