@@ -1,0 +1,14 @@
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - base=20251006142418/test_queue_inplace_uptodate_autosquash_false/main
+  - label=queue
+  name: Automatic merge
+queue_rules:
+- autosquash: false
+  conditions: []
+  name: default
+  update_bot_account: mergify-test4
+  update_method: rebase
