@@ -1,0 +1,15 @@
+merge_queue:
+  max_parallel_checks: 1
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - base=20251006211524/test_queue_without_branch_protection_for_queueing/main
+  - label=queue
+  name: Merge priority high
+queue_rules:
+- branch_protection_injection_mode: merge
+  conditions: []
+  merge_method: squash
+  name: default
