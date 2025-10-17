@@ -1,0 +1,14 @@
+merge_queue:
+  max_parallel_checks: 5
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - base=20251017135407/test_merge_queue_refresh/main
+  - label=queue
+  name: default merge
+queue_rules:
+- conditions:
+  - status-success=continuous-integration/fake-ci
+  name: default
