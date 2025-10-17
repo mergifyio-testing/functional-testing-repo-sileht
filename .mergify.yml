@@ -1,0 +1,16 @@
+merge_queue:
+  max_parallel_checks: 1
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - base=20251017125219/test_queue_inplace_with_merge_update_method_and_bot_account/main
+  - label=queue
+  name: merge default
+queue_rules:
+- name: default
+  queue_conditions:
+  - status-success=continuous-integration/fake-ci
+  update_bot_account: mergify-test1
+  update_method: merge
