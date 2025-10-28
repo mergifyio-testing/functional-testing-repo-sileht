@@ -1,0 +1,14 @@
+merge_queue:
+  max_parallel_checks: 1
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - base=20251028224210/test_queue_just_rebase/main
+  - label=queue
+  name: default merge
+queue_rules:
+- name: default
+  queue_conditions:
+  - label=queue
