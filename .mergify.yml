@@ -1,8 +1,8 @@
 queue_rules:
-- merge_conditions:
-  - label=mergeme
-  name: default
-  queue_conditions:
-  - label=queue
+  - merge_conditions:
+      - label=mergeme
+    name: default
+    queue_conditions:
+      - label=queue
 shared:
   bla: 123
