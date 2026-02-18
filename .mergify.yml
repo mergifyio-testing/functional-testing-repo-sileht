@@ -1,0 +1,8 @@
+pull_request_rules:
+- actions:
+    assign:
+      add_users:
+      - mergify-test1
+  conditions:
+  - base=20260218174553/test_assign/main
+  name: assign
