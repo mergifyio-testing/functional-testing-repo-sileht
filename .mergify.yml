@@ -4,10 +4,3 @@ queue_rules:
   name: default
   queue_conditions:
   - label=queue
-- merge_conditions:
-  - label=mergemefast
-  name: hotfix
-  queue_conditions:
-  - label=hotfix
-shared:
-  bla: 123
