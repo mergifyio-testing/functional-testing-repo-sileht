@@ -1,0 +1,19 @@
+merge_protections:
+- if:
+  - base=20260416214338/test_batch_formation_success_failure_and_bisection/main
+  name: review required
+  success_conditions:
+  - '#approved-reviews-by>=1'
+merge_queue:
+  max_parallel_checks: 5
+queue_rules:
+- autoqueue: true
+  batch_max_wait_time: 0 s
+  batch_size: 3
+  merge_conditions:
+  - status-success=continuous-integration/fake-ci
+  merge_method: merge
+  name: default
+  queue_conditions:
+  - base=20260416214338/test_batch_formation_success_failure_and_bisection/main
+  - label=queue
