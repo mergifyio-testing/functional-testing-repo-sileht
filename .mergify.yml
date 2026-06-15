@@ -1,0 +1,10 @@
+merge_queue:
+  max_parallel_checks: 1
+queue_rules:
+- autoqueue: true
+  merge_method: fast-forward
+  name: default
+  queue_conditions:
+  - base=20260615214254/test_inplace_fast_forward_merge_sequential/main
+  - label=queue
+  - status-success=continuous-integration/fake-ci
