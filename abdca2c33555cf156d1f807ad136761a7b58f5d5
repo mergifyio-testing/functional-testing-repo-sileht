@@ -1,0 +1,12 @@
+checking_base_sha: 3b22ab429ed38f985cb13f806a38ba6a943650a7
+previous_failed_batches: []
+pull_requests:
+  - number: 64909
+    scopes:
+      - backend
+  - number: 64910
+    scopes:
+      - frontend
+scopes:
+  - backend
+  - frontend
