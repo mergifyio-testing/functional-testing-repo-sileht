@@ -1,0 +1,13 @@
+merge_queue:
+  max_parallel_checks: 5
+queue_rules:
+- autoqueue: true
+  batch_max_wait_time: 0 s
+  batch_size: 2
+  merge_conditions:
+  - status-success=continuous-integration/fake-ci
+  name: default
+  queue_branch_merge_method: fast-forward
+  queue_conditions:
+  - base=20260615214135/test_fast_forward_batch_merge_and_second_round/main
+  - label=queue
