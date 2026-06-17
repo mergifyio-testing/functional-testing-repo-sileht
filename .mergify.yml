@@ -1,0 +1,11 @@
+merge_queue:
+  max_parallel_checks: 5
+queue_rules:
+- autoqueue: true
+  merge_conditions:
+  - status-success=continuous-integration/fake-ci
+  merge_method: squash
+  name: default
+  queue_conditions:
+  - base=20260617103803/test_speculative_checks_out_of_order_failure_cascade_and_conflicts/main
+  - label=queue
