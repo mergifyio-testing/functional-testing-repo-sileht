@@ -1,0 +1,10 @@
+merge_queue:
+  max_parallel_checks: 5
+queue_rules:
+- autoqueue: true
+  merge_conditions:
+  - status-success=continuous-integration/fake-ci
+  name: default
+  queue_conditions:
+  - base=20260617101541/test_queued_pr_merged_manually/main
+  - label=queue
