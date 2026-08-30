@@ -1,0 +1,30 @@
+merge_queue:
+  max_parallel_checks: 5
+priority_rules:
+- allow_checks_interruption: true
+  conditions:
+  - queue-name=hotfix
+  name: hotfix-priority
+  priority: high
+pull_request_rules:
+- actions:
+    queue:
+      name: default
+  conditions:
+  - base=20260830132106/test_entry_failure_recovery_and_merge/main
+  - label=ready-to-merge
+  - '#approved-reviews-by>=1'
+  name: auto-queue
+queue_rules:
+- merge_conditions: []
+  name: hotfix
+  queue_conditions:
+  - label=hotfix
+- merge_conditions:
+  - status-success=continuous-integration/fake-ci
+  merge_method: rebase
+  name: default
+  queue_conditions:
+  - base=20260830132106/test_entry_failure_recovery_and_merge/main
+  - label=ready-to-merge
+  - '#approved-reviews-by>=1'
