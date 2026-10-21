@@ -1,0 +1,21 @@
+jobs:
+  job-5xx:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Fail with 5xx
+      run: 'echo "Error code: 503" && exit 1'
+  job-timeout:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Fail with timeout
+      run: 'echo "ERROR: connection timed out" && exit 1'
+  job-unmatched:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Fail with other error
+      run: echo "some other error" && exit 1
+name: ci
+'on':
+  pull_request:
+    branches:
+    - 20261021102826/test_log_pattern_conditions/main
