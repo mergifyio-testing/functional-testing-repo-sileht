@@ -1,0 +1,9 @@
+merge_protections:
+- if:
+  - base=20261023083951/test_merge_protections_check_change_triggers_refresh/main
+  name: queued
+  success_conditions:
+  - label=queue
+merge_protections_settings:
+  auto_merge_conditions:
+  - label=queue
