@@ -11,3 +11,4 @@ queue_rules:
   - base=20261112093943/test_inplace_checks_failure_and_synchronize/main
   - label=queue
   - check-success=continuous-integration/fake-ci
+  update_method: rebase
